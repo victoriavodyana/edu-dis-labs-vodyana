@@ -14,12 +14,12 @@ cd docs/.vuepress/dist
 
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m '[automated]: pushing regenerated documentation'
 
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:boldak/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/boldak/dis-edu.git master:gh-pages
+git push -f http://10.1.1.1:3000/hasslesstech/edu-dis-labs master:gh-pages
 
 cd -

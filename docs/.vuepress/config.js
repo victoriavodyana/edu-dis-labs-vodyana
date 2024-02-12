@@ -15,7 +15,7 @@ module.exports = {
     }]
   ],
   port: 3030,
-  base: '/docs/',
+  base: '/edu-dis-labs/',
   theme: 'cool',
   // dest: 'dist',
   head: [
@@ -74,10 +74,10 @@ module.exports = {
 
     lastUpdated: 'Останнє оновлення', // string | boolean
       // Assumes GitHub. Can also be a full GitLab url.
-    repo: 'https://github.com/boldak/edu-dis-labs',
+    repo: 'http://139.162.162.130:3000/hasslesstech/edu-dis-labs',
     // Customising the header label
     // Defaults to "GitHub"/"GitLab"/"Bitbucket" depending on `themeConfig.repo`
-    repoLabel: 'Github',
+    repoLabel: 'Gitea',
 
     // Optional options for generating "Edit this page" link
 
