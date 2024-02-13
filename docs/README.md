@@ -3,17 +3,26 @@ home: true
 actionText: Розпочати →
 actionLink: /intro/
 
-footer: "ECL 2.0 Licensed | Copyright © [YYYY] [Your Name]"
+footer: "ECL 2.0 Licensed | Copyright © 2024 [Your Name]"
 ---
-
 
 **Виконали:** 
 
-*студенти [X]-го курсу, групи (шифр групи)* 
+*студенти 2-го курсу, групи ІО-23:*
 
-**[ім’я ПРІЗВИЩЕ] [Посилання email, tg, fb]**
+*Олег ШМУЛЯР [shmuliar1@ukr.net, [@dmytrofiot23](https://t.me/dmytrofiot23)]*
 
-**[ім’я ПРІЗВИЩЕ] [Посилання email, tg, fb]**
+*Андрій БОДНАР [bodnarandrew123@gmail.com, [@andrux4](https://t.me/andrux4)]*
+
+*Андрій ШВЕД [andreyfrog26@gmail.com, [@Rhinemann](https://t.me/Rhinemann)]*
+
+*Євгеній ГОЛОВАТЕНКО [ievgeniigol@gmail.com, [@yevholova](https://t.me/yevholova)]*
+
+*Вікторія ВОДЯНА [vodyanayaviktoria@gmail.com, [@victoriavodyana](https://t.me/victoriavodyana)]*
+
+*Михайло КОРБУТ [korbutmykhailo@gmail.com, [@misha1tigr](https://t.me/misha1tigr)]*
+
+*Олександр ГУРАНЕЦЬ [bacant150@gmail.com, [@Bacant150](https://t.me/Bacant150)]*
 
 
 **Керівник**
