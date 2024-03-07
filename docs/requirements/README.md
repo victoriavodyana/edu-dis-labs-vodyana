@@ -154,7 +154,7 @@ QuestionPro — це програмне забезпечення для ство
 
 ![QuestionPro](http://139.162.162.130:16660/img/img-1.5.jpg)
 
-[Fillout](https://www.fillout.com/?ref=fillout&gad_source=1&gclid=CjwKCAiAxaCvBhBaEiwAvsLmWOnGBuW6UAIyCQaTS3p7lQvU1aTkJFCwpICUgY55X5zPS5LijMoh6xoC7okQAvD_BwE)
+[Fillout](https://www.fillout.com/)
 
 Fillout — це платформа для створення форм, опитувань і тестів. Fillout 
 інтегрується з інструментами, які вже використовує користувач, щоб 
