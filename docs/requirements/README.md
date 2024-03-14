@@ -319,3 +319,16 @@ Fillout. Для компаній із суворими вимогами щодо
 
 Також додаткові функції (такі як квоти відповідей або перегляд недозаповнених форм), що наявні в безкоштовній версії продукту, можуть привабити додаткових користувачів, що бажають отримати такі інструменти, проте не хочуть віддавати чималі гроші за коштовні сервіси. З огляду на це вважаємо, що розробка такого проєкту має сенс.
 
+## Література
+
+1. [https://uk.wikipedia.org/wiki/База_даних](https://uk.wikipedia.org/wiki/База_даних)
+2. [https://uk.wikipedia.org/wiki/SQL](https://uk.wikipedia.org/wiki/SQL)
+3. [https://uk.wikipedia.org/wiki/Опитування](https://uk.wikipedia.org/wiki/Опитування)
+4. [https://ela.kpi.ua/server/api/core/bitstreams/8a8030cf-bfc1-4586-b197-1c7e3bf02700/content](https://ela.kpi.ua/server/api/core/bitstreams/8a8030cf-bfc1-4586-b197-1c7e3bf02700/content)
+5. [http://elbib.in.ua/vidi-ekspertnogo-opituvannya-metodologiya-ta-metodi-sotsiologichnih-doslidjen.html](http://elbib.in.ua/vidi-ekspertnogo-opituvannya-metodologiya-ta-metodi-sotsiologichnih-doslidjen.html)
+6. [https://uk.wikipedia.org/wiki/Google_Форми](https://uk.wikipedia.org/wiki/Google_Форми)
+7. [https://en.wikipedia.org/wiki/SurveyMonkey](https://en.wikipedia.org/wiki/SurveyMonkey)
+8. [https://www.responsly.com](https://www.responsly.com)
+9. [https://en.wikipedia.org/wiki/Jotform](https://en.wikipedia.org/wiki/Jotform)
+10. [https://questionpro.com/](https://questionpro.com/)
+11. [https://www.fillout.com/](https://www.fillout.com/)
