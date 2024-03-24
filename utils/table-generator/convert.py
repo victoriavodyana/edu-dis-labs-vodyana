@@ -14,7 +14,15 @@ def convert_generic_v1(data):
 
 def convert_usecase_v1(filename, data):
     split_raw_lines_from_file = [i.split(" | ") for i in data.split("\n") if i]
-    split_raw_lines = [["ID", filename.upper()]] + split_raw_lines_from_file
+
+    if '/' in filename:
+        use_case_name = filename.rsplit("/", 1)[1].upper()
+    elif '\\' in filename:
+        use_case_name = filename.rsplit("\\", 1)[1].upper()
+    else:
+        use_case_name = filename.upper()
+
+    split_raw_lines = [["ID", use_case_name]] + split_raw_lines_from_file
 
     merged_lines = []
     for i in split_raw_lines:
