@@ -96,7 +96,7 @@ if __name__=="__main__":
 
     if len(files) == 1:
         name = files[0]
-        data = open(name).read()
+        data = open(name, encoding = "utf-8").read()
 
         if usecase_formatting == YES:
             if verbose == YES:
@@ -113,14 +113,14 @@ if __name__=="__main__":
             print(formatted_table_data)
         
         if write_to_file > AUTO:
-            open(name + ".table", 'w').write(data+"\n")
+            open(name + ".table", 'w', encoding = "utf-8").write(data+"\n")
 
         exit(0)
 
     for no, name in enumerate(sys.argv[1:]):
         print(f"Converting {no+1}/{len(sys.argv)}")
 
-        data = open(name).read()
+        data = open(name, encoding = "utf-8").read()
 
         if usecase_formatting == YES:
             if verbose >= AUTO:
@@ -137,4 +137,4 @@ if __name__=="__main__":
             print(formatted_table_data)
         
         if write_to_file >= AUTO:
-            open(name + ".table", 'w').write(data+"\n")
+            open(name + ".table", 'w', encoding = "utf-8").write(data+"\n")
