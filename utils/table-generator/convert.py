@@ -67,7 +67,9 @@ if __name__=="__main__":
     write_to_stdout = AUTO
     usecase_formatting = AUTO
     verbose = AUTO
+    process_table_files = AUTO
 
+    # 1 pass (argument harvest)
     for i in sys.argv[1:]:
         if i.startswith("-"):
             # записувати таблицю в файл
@@ -94,8 +96,18 @@ if __name__=="__main__":
             elif i in ["-nv", "--no-verbose"]:
                 verbose = NO
 
-        else:
-            files.append(i)
+            elif i in ["-t", "--process-table"]:
+                process_table_files = YES
+            elif i in ["-nt", "--no-process-table"]:
+                process_table_files = NO
+
+    # 2 pass (filename harvest)
+    for i in sys.argv[1:]:
+        if not i.startswith("-"):
+            if i.endswith(".table") and process_table_files <= AUTO:
+                print(f"[Warning]: Excluding {i} to prevent processing of an already processed file (pass --process-table to override this behaviour)")
+            else:
+                files.append(i)
 
     if len(files) < 1:
         print("You need to pass at least one file as CLI argument", file=sys.stderr)
@@ -121,12 +133,12 @@ if __name__=="__main__":
             print(formatted_table_data)
         
         if write_to_file > AUTO:
-            open(name + ".table", 'w', encoding = "utf-8").write(data+"\n")
+            open(name + ".table", 'w', encoding = "utf-8").write(formatted_table_data+"\n")
 
         exit(0)
 
-    for no, name in enumerate(sys.argv[1:]):
-        print(f"Converting {no+1}/{len(sys.argv)}")
+    for no, name in enumerate(files):
+        print(f"Converting {no+1}/{len(files)}")
 
         data = open(name, encoding = "utf-8").read()
 
@@ -145,4 +157,4 @@ if __name__=="__main__":
             print(formatted_table_data)
         
         if write_to_file >= AUTO:
-            open(name + ".table", 'w', encoding = "utf-8").write(data+"\n")
+            open(name + ".table", 'w', encoding = "utf-8").write(formatted_table_data+"\n")
