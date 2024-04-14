@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Generated tables for use-cases
+utils/table-generator/tables/

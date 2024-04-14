@@ -1,6 +1,7 @@
 #!/bin/python3
 
 import sys
+import os
 
 # magic values
 NO   = 0
@@ -26,7 +27,7 @@ def convert_usecase_v1(filename, data):
 
     merged_lines = []
     for i in split_raw_lines:
-        if i[0] == "":
+        if i[0].replace(" ", "") == "":
             merged_lines[-1][1] += "<br>" + i[1]
         else:
             merged_lines.append(i)
@@ -68,9 +69,10 @@ if __name__=="__main__":
     usecase_formatting = AUTO
     verbose = AUTO
     process_table_files = AUTO
+    file_output_path = None
 
     # 1 pass (argument harvest)
-    for i in sys.argv[1:]:
+    for n, i in enumerate(sys.argv[1:]):
         if i.startswith("-"):
             # записувати таблицю в файл
             if i in ["-f", "--file"]:
@@ -96,10 +98,16 @@ if __name__=="__main__":
             elif i in ["-nv", "--no-verbose"]:
                 verbose = NO
 
+            # дозволити обробку файлів .table
             elif i in ["-t", "--process-table"]:
                 process_table_files = YES
             elif i in ["-nt", "--no-process-table"]:
                 process_table_files = NO
+
+            # задає папку, в яку необхідно зберігати конвертовані таблиці
+            elif i in ["-d", "--destination"]:
+                file_output_path = sys.argv[n+2]
+                sys.argv.remove(sys.argv[n+2])
 
     # 2 pass (filename harvest)
     for i in sys.argv[1:]:
@@ -133,12 +141,17 @@ if __name__=="__main__":
             print(formatted_table_data)
         
         if write_to_file > AUTO:
-            open(name + ".table", 'w', encoding = "utf-8").write(formatted_table_data+"\n")
+            if file_output_path:
+                open(os.path.join(file_output_path, os.path.basename(name)) \
+                        + ".table", 'w', encoding = "utf-8") \
+                        .write(formatted_table_data+"\n")
+            else:
+                open(name + ".table", 'w', encoding = "utf-8").write(formatted_table_data+"\n")
 
         exit(0)
 
     for no, name in enumerate(files):
-        print(f"Converting {no+1}/{len(files)}")
+        print(f"Converting {no+1:02d}/{len(files)}: {name}")
 
         data = open(name, encoding = "utf-8").read()
 
@@ -157,4 +170,9 @@ if __name__=="__main__":
             print(formatted_table_data)
         
         if write_to_file >= AUTO:
-            open(name + ".table", 'w', encoding = "utf-8").write(formatted_table_data+"\n")
+            if file_output_path:
+                open(os.path.join(file_output_path, os.path.basename(name)) \
+                        + ".table", 'w', encoding = "utf-8") \
+                        .write(formatted_table_data+"\n")
+            else:
+                open(name + ".table", 'w', encoding = "utf-8").write(formatted_table_data+"\n")
