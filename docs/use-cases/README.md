@@ -14,18 +14,18 @@
     :Гість: as Guest
     :Зареєстрований користувач: as AuthorisedUser
 
-    ("<b>ACCOUNT.CREATE</b>\nСтворити обліковий запис") as CreateAccount
-    ("<b>ACCOUNT.DELETE</b>\nВидалити обліковий запис") as DeleteAccount
-    ("<b>ACCOUNT.MODIFY</b>\nЗмінити властивості облікового запису") as ModifyAccount
-    ("<b>USER.CREATE_SURVEY</b>\nСтворити опитування") as CreateSurvey
-    ("<b>USER.DELETE_SURVEY</b>\nВидалити опитування") as DeleteSurvey
-    ("<b>USER.GET_SURVEY_RESULT</b>\nПереглянути відповіді на опитування") as GetSurveyResult
-    ("<b>USER.LOGIN</b>\nПройти ідентифікацію в системі") as LogIn
-    ("<b>USER.LOGOUT</b>\nСкинути дані про ідентифікацію в системі") as LogOut
-    ("<b>USER.MODIFY_SURVEY</b>\nРедагувати опитування") as ModifySurvey
-    ("<b>USER.STAT_SURVEY</b>\nПереглянути властивості опитування") as StatSurvey
-    ("<b>USER.TAKE_ANON_SURVEY</b>\nПройти анонімне опитування") as TakeAnonSurvey
-    ("<b>USER.TAKE_NAMED_SURVEY</b>\nПройти поіменне опитування") as TakeNamedSurvey
+    (<b>ACCOUNT.CREATE</b>\nСтворити обліковий запис) as CreateAccount
+    (<b>ACCOUNT.DELETE</b>\nВидалити обліковий запис) as DeleteAccount
+    (<b>ACCOUNT.MODIFY</b>\nЗмінити властивості облікового запису) as ModifyAccount
+    (<b>USER.CREATE_SURVEY</b>\nСтворити опитування) as CreateSurvey
+    (<b>USER.DELETE_SURVEY</b>\nВидалити опитування) as DeleteSurvey
+    (<b>USER.GET_SURVEY_RESULT</b>\nПереглянути відповіді на опитування) as GetSurveyResult
+    (<b>USER.LOGIN</b>\nПройти ідентифікацію в системі) as LogIn
+    (<b>USER.LOGOUT</b>\nСкинути дані про ідентифікацію в системі) as LogOut
+    (<b>USER.MODIFY_SURVEY</b>\nРедагувати опитування) as ModifySurvey
+    (<b>USER.STAT_SURVEY</b>\nПереглянути властивості опитування) as StatSurvey
+    (<b>USER.TAKE_ANON_SURVEY</b>\nПройти анонімне опитування) as TakeAnonSurvey
+    (<b>USER.TAKE_NAMED_SURVEY</b>\nПройти поіменне опитування) as TakeNamedSurvey
 
     Guest -u-> CreateAccount
     Guest --> LogIn
