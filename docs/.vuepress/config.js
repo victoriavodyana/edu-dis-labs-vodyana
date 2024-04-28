@@ -36,6 +36,15 @@ module.exports = {
     {
       title: 'Розроблення вимог до системи',
         path:"/requirements/",
+        children: [
+            "/requirements/state-of-the-art",
+            "/requirements/stakeholders-needs"
+        ]
+    },
+
+    {
+      title: 'Розроблення вимог до функціональности системи',
+      path:"/use-cases/"
     },
 
     {
@@ -93,7 +102,7 @@ module.exports = {
     // editLinkText: 'Ви можете покращити цю сторінку'
 
   },
-  title: 'Назва проєкту',
+  title: 'Expertise',
   description: 'Лабораторні роботи з дисципліни "Розподілені інформаційні системи"',
   configureWebpack: {
     resolve: {
