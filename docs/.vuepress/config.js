@@ -102,7 +102,7 @@ module.exports = {
     // editLinkText: 'Ви можете покращити цю сторінку'
 
   },
-  title: 'Назва проєкту',
+  title: 'Expertise',
   description: 'Лабораторні роботи з дисципліни "Розподілені інформаційні системи"',
   configureWebpack: {
     resolve: {
