@@ -36,6 +36,15 @@ module.exports = {
     {
       title: 'Розроблення вимог до системи',
         path:"/requirements/",
+        children: [
+            "/requirements/state-of-the-art",
+            "/requirements/stakeholders-needs"
+        ]
+    },
+
+    {
+      title: 'Розроблення вимог до функціональности системи',
+      path:"/use-cases/"
     },
 
     {
