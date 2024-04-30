@@ -27,6 +27,13 @@ entity Question.text <<TEXT>>
 entity Responce
 entity Responce.value <<TEXT>>
 
+entity Link
+entity Link.usageLimit
+entity Link.responceLimit
+entity Link.uses
+entity Link.responces
+entity Link.path
+
 Account.username --* Account
 Account.password --* Account
 
@@ -34,6 +41,12 @@ Survey.name --* Survey
 Survey.duration --* Survey
 Survey.isPaused --* Survey
 Survey.isNamed --* Survey
+
+Link.usageLimit -u-* Link
+Link.responceLimit -u-* Link
+Link.uses --* Link
+Link.responces --* Link
+Link.path -u-* Link
 
 Responce.value -u-* Responce
 
@@ -43,6 +56,7 @@ Account "1,1" -- "0,*" Survey
 Survey "1,1" -- "0,*" Question
 Question "1,1" -r- "0,*" Responce
 Account "0,1" -r- "0,*" Responce
+Link "0,*" -- "1,1" Survey
 
 @enduml
 
