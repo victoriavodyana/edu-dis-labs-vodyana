@@ -28,11 +28,11 @@ entity Responce <<ENTITY>>
 entity Responce.value <<TEXT>>
 
 entity Link <<ENTITY>>
-entity Link.usageLimit
-entity Link.responceLimit
-entity Link.uses
-entity Link.responces
-entity Link.path
+entity Link.usageLimit <<INT>>
+entity Link.responceLimit <<INT>>
+entity Link.uses <<INT>>
+entity Link.responces <<INT>>
+entity Link.path <<TEXT>>
 
 Account.username --* Account
 Account.password --* Account
