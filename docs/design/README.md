@@ -1,11 +1,6 @@
-# Проєктування системи
+# Проєктування бази даних
 
-
-Вбудовування зображень діаграм здійснюється з використанням сервісу [plantuml.com](https://plantuml.com/). 
-
-В markdown-файлі використовується опис діаграми
-
-```md
+## BE модель
 
 <center style="
     border-radius:4px;
@@ -16,67 +11,52 @@
 
 @startuml
 
-participant Client
+entity Account
+entity Account.username <<TEXT>>
+entity Account.password <<TEXT>>
 
-participant SR as "Service Registry"
+entity Survey
+entity Survey.name <<TEXT>>
+entity Survey.duration <<TEXT>>
+entity Survey.isPaused <<BOOLEAN>>
+entity Survey.isNamed <<BOOLEAN>>
 
-participant Service
+entity Question
+entity Question.text <<TEXT>>
 
-Service -> SR : register
-SR -> SR
-SR --> Service
-...
+entity Responce
+entity Responce.value <<TEXT>>
 
-SR -> Service: heartbeat
-SR <-- Service: health
-...
+entity Link
+entity Link.usageLimit
+entity Link.responceLimit
+entity Link.uses
+entity Link.responces
+entity Link.path
 
-Client -> SR: find
-Client <-- SR: service endpoint
-Client -> Service: request
-Client <-- Service: response
+Account.username --* Account
+Account.password --* Account
 
+Survey.name --* Survey
+Survey.duration --* Survey
+Survey.isPaused --* Survey
+Survey.isNamed --* Survey
 
+Link.usageLimit -u-* Link
+Link.responceLimit -u-* Link
+Link.uses --* Link
+Link.responces --* Link
+Link.path -u-* Link
 
-@enduml
+Responce.value -u-* Responce
 
-</center>
-```
+Question.text -u-* Question
 
-яка буде відображена наступним чином
-
-<center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
->
-
-@startuml
-
-    @startuml
-
-participant Client
-
-participant SR as "Service Registry"
-
-participant Service
-
-Service -> SR : register
-SR -> SR
-SR --> Service
-...
-
-SR -> Service: heartbeat
-SR <-- Service: health
-...
-
-Client -> SR: find
-Client <-- SR: service endpoint
-Client -> Service: request
-Client <-- Service: response
-
-
+Account "1,1" -- "0,*" Survey
+Survey "1,1" -- "0,*" Question
+Question "1,1" -r- "0,*" Responce
+Account "0,1" -r- "0,*" Responce
+Link "0,*" -- "1,1" Survey
 
 @enduml
 
