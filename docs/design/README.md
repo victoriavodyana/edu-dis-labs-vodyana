@@ -11,23 +11,23 @@
 
 @startuml
 
-entity Account
+entity Account <<ENTITY>>
 entity Account.username <<TEXT>>
 entity Account.password <<TEXT>>
 
-entity Survey
+entity Survey <<ENTITY>>
 entity Survey.name <<TEXT>>
 entity Survey.duration <<TEXT>>
 entity Survey.isPaused <<BOOLEAN>>
 entity Survey.isNamed <<BOOLEAN>>
 
-entity Question
+entity Question <<ENTITY>>
 entity Question.text <<TEXT>>
 
-entity Responce
+entity Responce <<ENTITY>>
 entity Responce.value <<TEXT>>
 
-entity Link
+entity Link <<ENTITY>>
 entity Link.usageLimit
 entity Link.responceLimit
 entity Link.uses
@@ -62,5 +62,56 @@ Link "0,*" -- "1,1" Survey
 
 </center>
 
+## ER-модель
 
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
 
+@startuml
+
+entity Account <<ENTITY>> {
+    id:INT
+    username:CHAR(64)
+    password:CHAR(256)
+}
+
+entity Responce <<ENTITY>> {
+    id:INT
+    value:CHAR(16384)
+}
+
+entity Question <<ENTITY>> {
+    id:INT
+    text:CHAR(256)
+}
+
+entity Survey <<ENTITY>> {
+    id:INT
+    name:CHAR(256)
+    duration:CHAR(256)
+    isPaused:BOOLEAN
+    isNamed:BOOLEAN
+}
+
+entity Link <<ENTITY>> {
+    id:INT
+    uses:INT
+    responces:INT
+    usageLimit:INT
+    responceLimit:INT
+    path:CHAR(32)
+}
+
+Responce "0,*" --> "1,1" Question
+Question "0,*" --> "1,1" Survey
+Survey "0,*" --> "1,1" Account
+Link "0,*" --> "1,1" Survey
+Responce "0,*" --> "0,1" Account
+
+@enduml
+
+</center>
