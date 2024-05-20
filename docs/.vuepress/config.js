@@ -102,8 +102,8 @@ module.exports = {
     // editLinkText: 'Ви можете покращити цю сторінку'
 
   },
-  title: 'Expertise',
-  description: 'Лабораторні роботи з дисципліни "Розподілені інформаційні системи"',
+  title: 'Xpertise',
+  description: 'Лабораторні роботи з дисципліни "Організація баз даних"',
   configureWebpack: {
     resolve: {
       alias: {
