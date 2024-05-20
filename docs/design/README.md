@@ -115,3 +115,6 @@ Responce "0,*" --> "0,1" Account
 @enduml
 
 </center>
+
+## Реляційна схема
+![relational_schema](./relational_scheme.png)
