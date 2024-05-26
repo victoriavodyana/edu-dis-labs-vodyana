@@ -43,6 +43,7 @@ def api_survey_numbered(survey_id):
 
     elif request.method == "PUT":
         data = request.json
+        
 
         survey.isPaused = data['isPaused']
         survey.isNamed = data['isNamed']
