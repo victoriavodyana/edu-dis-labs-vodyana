@@ -67,10 +67,6 @@ module.exports = {
       path:"/conclusion/"
     },
     
-    {
-      title: 'API',
-      path:"/api/"
-    }
 
   ],
     sidebarDepth: 2,
